@@ -221,10 +221,12 @@ def run_script():
 # CORN JOB EVERY 15 MIN
 # =====================================================
 
-if __name__ == "__main__":
+while True:
     try:
-        print("🔄 Starting sync...")
+        print("\n🔄 Starting sync...")
         run_script()
-        print("✅ Sync completed")
     except Exception as e:
         print("❌ Script Error:", e)
+
+    print("⏸ Sleeping 15 mins...")
+    time.sleep(900)
